@@ -22,6 +22,6 @@ bookingSchema.set('toJSON',{
     }
 })
 
-const Booking = model('booking',bookingSchema)
+const Booking = model('Booking',bookingSchema)
 
 module.exports=Booking

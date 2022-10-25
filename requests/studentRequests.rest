@@ -1,0 +1,12 @@
+GET http://localhost:3001/api/students
+
+###########################
+POST http://localhost:3001/api/students
+Content-Type: application/json
+
+{
+    "idUsuario":"63575d2b856da5c629243a7a",
+    "fechaNacimiento":,
+    "mayorEstudioCursado":,
+    "mayorEstudioFinalizado":
+}

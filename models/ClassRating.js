@@ -21,6 +21,6 @@ classRatingSchema.set('toJSON',{
     }
 })
 
-const ClassRating = model('classRating',classRatingSchema)
+const ClassRating = model('ClassRating',classRatingSchema)
 
 module.exports=ClassRating

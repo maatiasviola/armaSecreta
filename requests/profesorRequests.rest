@@ -1,0 +1,11 @@
+GET http://localhost:3001/api/profesors
+
+###########################
+POST http://localhost:3001/api/profesors
+Content-Type: application/json
+
+{
+    "idUsuario":"63575d2b856da5c629243a7a",
+    "titulo":"Licenciatura en Matematicas",
+    "experiencia":"Sin experiencia pero con ganas"
+}

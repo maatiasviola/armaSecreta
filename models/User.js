@@ -6,7 +6,7 @@ const userSchema = new Schema({
     apellido:String,
     srcImagen:String,
     email:String,
-    password:String,
+    passwordHash:String,
     preguntaVerificacion:String,
     respuestaVerificacion:String,
     nroTelefono:String,
@@ -22,11 +22,11 @@ userSchema.set('toJSON',{
         returnedObject.id=returnedObject._id
         delete returnedObject._id
         delete returnedObject.__v
-        delete returnedObject.password
+        delete returnedObject.passwordHash
     }
 })
 
 //permite crear instancias de este modelo
-const User = model('user',userSchema)
+const User = model('User',userSchema)
 
 module.exports=User

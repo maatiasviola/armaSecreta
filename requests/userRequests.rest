@@ -1,0 +1,20 @@
+GET http://localhost:3001/api/users
+
+###########################
+POST http://localhost:3001/api/users
+Content-Type: application/json
+
+{
+    "nombre":"Matias",
+    "apellido":"Viola",
+    "srcImagen":"https://www.compartirpalabramaestra.org/sites/default/files/styles/articulos/public/field/image/el-profesor-cierra-los-ojos-vol-2.jpg?itok=maIWtEha",
+    "email":"matiasviola02@gmail.com",
+    "password":"mati123",
+    "preguntaVerificacion":"¿Cual es el nombre de tu madre?",
+    "respuestaVerificacion":"Belen",
+    "nroTelefono":"12345678",
+    "rol":"profesor"
+}
+
+##############################
+DELETE http://localhost:3001/api/users/63571b37983c45ad6cdfe418

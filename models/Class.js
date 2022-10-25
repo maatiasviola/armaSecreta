@@ -29,6 +29,6 @@ classSchema.set('toJSON',{
     }
 })
 
-const Class = model('class',classSchema)
+const Class = model('Class',classSchema)
 
 module.exports=Class

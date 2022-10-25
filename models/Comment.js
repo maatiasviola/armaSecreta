@@ -22,6 +22,6 @@ commentSchema.set('toJSON',{
     }
 })
 
-const Comment = model('comment',commentSchema)
+const Comment = model('Comment',commentSchema)
 
 module.exports=Comment

@@ -1,0 +1,22 @@
+GET http://localhost:3001/api/classes
+
+###########################
+POST http://localhost:3001/api/classes
+Content-Type: application/json
+
+{
+    "nombre": "Guitarra Para Principiantes",
+    "descripcion": "Aprende paso a paso a tocar la guitarra. Aprende tocando y olvidate de ejercicios aburridos",
+    "tipoClase": "individual",
+    "frecuencia": "semanal",
+    "calificacion": 0,
+    "esNueva": true,
+    "duracion": 1,
+    "costo": 100,
+    "idProfesor":,
+    "srcImagen": "https://guitarraviva.b-cdn.net/wp-content/uploads/2015/09/stock-nylon-bossa_67587098.jpg",
+    "materia":6
+}
+
+##############################
+DELETE http://localhost:3001/api/classes/

@@ -18,6 +18,6 @@ profesorSchema.set('toJSON',{
     }
 })
 
-const Profesor = model('profesor',profesorSchema)
+const Profesor = model('Profesor',profesorSchema)
 
 module.exports=Profesor

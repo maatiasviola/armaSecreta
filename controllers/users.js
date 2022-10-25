@@ -8,22 +8,55 @@ const bcrypt=require('bcrypt')
 
 usersRouter.get('/',async(request,response)=>{
     const users= await User.find({})
+    console.log(users)
     response.json(users)
 })
 
 usersRouter.post('/',async(request,response)=>{
-    const {body}=request
-    const {}=body
+    const {body}= request
+    const { 
+        nombre,
+        apellido,
+        srcImagen,
+        email,
+        password,
+        preguntaVerificacion,
+        respuestaVerificacion,
+        nroTelefono,
+        rol
+    }=body
 
     //hasheo la password, el segundo param indica la complejidad algoritmica con que hasheo
     const passwordHash=await bcrypt.hash(password,10)
 
     const user = new User({
-     passwordHash   
-    })
+        nombre,
+        apellido,
+        srcImagen,
+        email,
+        passwordHash,
+        preguntaVerificacion,
+        respuestaVerificacion,
+        nroTelefono,
+        rol  
+       })
 
     const savedUser=await user.save()
     response.json(savedUser)
+})
+
+usersRouter.get('/:id',async(request,response)=>{
+    const {id}=request.params
+    const user= await User.findById(id)
+    console.log(user)
+    response.json(user)
+})
+
+usersRouter.delete('/:id',async(request,response)=>{
+    const {id}=request.params
+    const user= await User.findByIdAndDelete(id)
+    console.log(user)
+    response.json(user)
 })
 
 
