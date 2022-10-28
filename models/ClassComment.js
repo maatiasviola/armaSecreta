@@ -10,7 +10,7 @@ const commentSchema = new Schema({
         type:Schema.Types.ObjectId,
         ref:'Student'
     },
-    descripcion:String,
+    texto:String,
     bloqueado:Boolean
 })
 
@@ -22,6 +22,6 @@ commentSchema.set('toJSON',{
     }
 })
 
-const Comment = model('Comment',commentSchema)
+const ClassComment = model('ClassComment',commentSchema)
 
-module.exports=Comment
+module.exports=ClassComment

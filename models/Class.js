@@ -10,15 +10,24 @@ const classSchema = new Schema({
     esNueva: Boolean,
     duracion: Number,
     costo: Number,
-    idProfesor: {
+    usuario: {
+        type:Schema.Types.ObjectId,
+        ref:'User'
+    },
+    profesor:{
         type:Schema.Types.ObjectId,
         ref:'Profesor'
     },
     srcImagen: String,
-    materia:{
+    materia:Number,
+    calificaciones:[{
         type:Schema.Types.ObjectId,
-        ref:'Materia'
-    }
+        ref:'ClassRating'
+    }],
+    comentarios:[{
+        type:Schema.Types.ObjectId,
+        ref:'ClassComment'
+    }]
 })
 
 classSchema.set('toJSON',{

@@ -3,6 +3,7 @@ GET http://localhost:3001/api/classes
 ###########################
 POST http://localhost:3001/api/classes
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNWI1MTg0YzRlNzI4ZmI4MzAzMWE4ZSIsImVtYWlsIjoibWF0aWFzdmlvbGEwMkBnbWFpbC5jb20iLCJpYXQiOjE2NjY5MjkwNDh9.njHvywqJ2qckapPpZsOnJNuO4PTElTcFM8hDEl3oirM
 
 {
     "nombre": "Guitarra Para Principiantes",
@@ -13,10 +14,12 @@ Content-Type: application/json
     "esNueva": true,
     "duracion": 1,
     "costo": 100,
-    "idProfesor":,
     "srcImagen": "https://guitarraviva.b-cdn.net/wp-content/uploads/2015/09/stock-nylon-bossa_67587098.jpg",
     "materia":6
 }
 
 ##############################
-DELETE http://localhost:3001/api/classes/
+DELETE http://localhost:3001/api/classes/635c2721b18edc1b535400b0
+
+###############
+GET http://localhost:3001/api/classes/635c27c4387ea5f33d976b7f

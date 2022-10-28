@@ -47,7 +47,7 @@ usersRouter.post('/',async(request,response)=>{
 
 usersRouter.get('/:id',async(request,response)=>{
     const {id}=request.params
-    const user= await User.findById(id)
+    const user= await User.findById(id).populate('clases')
     console.log(user)
     response.json(user)
 })

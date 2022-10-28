@@ -1,19 +1,20 @@
-const classRatingsRouter = require('express').Router()
+const classCommentsRouter = require('express').Router()
 const Class = require('../models/Class')
-const ClassRating = require('../models/ClassRating')
+const ClassComment = require('../models/ClassComment')
 const jwt = require('jsonwebtoken')
 const User = require('../models/User')
 require('dotenv').config()
 //El path es ahora relativo al indicado en el indice
 
-classRatingsRouter.post('/',async(request,response)=>{
+classCommentsRouter.post('/',async(request,response)=>{
     const {body}= request
     const { 
         idClase,
-        calificacion
+        texto
     }=body
 
     console.log("idClase ",idClase)
+    console.log("texto ",texto)
 
     //autorizacion
     const authorization = request.get('authorization')
@@ -37,21 +38,22 @@ classRatingsRouter.post('/',async(request,response)=>{
     const clase = await Class.findOne({idClase})    
     console.log("clase encontrada: ",clase)
 
-    const classRating = new ClassRating({
+    const classComment = new ClassComment({
         idClase:clase._id,
         idUsuario:user._id,
-        calificacion
+        texto,
+        bloqueado:false
        })
     
     try{
-        const savedClassRating=await classRating.save()
-        clase.calificaciones=clase.calificaciones.concat(savedClassRating._id)
+        const savedClassComment=await classComment.save()
+        clase.comentarios=clase.comentarios.concat(savedClassComment._id)
         await clase.save()
-        response.json(savedClassRating)
+        response.json(savedClassComment)
     }catch(error){
         console.log(error)
     }
 })
 
 
-module.exports=classRatingsRouter
+module.exports=classCommentsRouter

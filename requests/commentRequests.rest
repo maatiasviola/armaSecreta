@@ -1,0 +1,9 @@
+POST http://localhost:3001/api/comments
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNWI1MTg0YzRlNzI4ZmI4MzAzMWE4ZSIsImVtYWlsIjoibWF0aWFzdmlvbGEwMkBnbWFpbC5jb20iLCJpYXQiOjE2NjY5MjkwNDh9.njHvywqJ2qckapPpZsOnJNuO4PTElTcFM8hDEl3oirM
+
+{
+    "idClase":"635c3032dcd40499f7a22a58",
+    "idUsuario":"635b57c51455153d46ed68b0",
+    "texto":"excelente clase"
+}
