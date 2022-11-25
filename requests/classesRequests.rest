@@ -22,4 +22,4 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNWI1MTg0Y
 DELETE http://localhost:3001/api/classes/635c2721b18edc1b535400b0
 
 ###############
-GET http://localhost:3001/api/classes/635c27c4387ea5f33d976b7f
+GET http://localhost:3001/api/classes/635c3032dcd40499f7a22a58
